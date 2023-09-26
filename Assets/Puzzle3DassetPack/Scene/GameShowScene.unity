@@ -10249,7 +10249,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 267937b794409ca45af2ae4113ab7086,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 267937b794409ca45af2ae4113ab7086,
         type: 3}
@@ -32368,7 +32368,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
-  - {fileID: 2100000, guid: bd4b177d3999a2848afd380b954a5b54, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
