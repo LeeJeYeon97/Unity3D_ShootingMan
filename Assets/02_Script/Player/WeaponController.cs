@@ -117,7 +117,8 @@ public class WeaponController : MonoBehaviour
                 return;
             }
             // ÃÑ¾Ë »ý¼º
-            Managers.Pool.GetPool(bulletName);
+            GameObject bullet = Managers.Pool.GetPool(bulletName);
+            bullet.GetComponent<BulletController>().Init(firePos, _attackDir);
             curAmmo--;
             _attackDelay = 0.1f;
         }

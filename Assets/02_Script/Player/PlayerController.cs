@@ -183,7 +183,7 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.CompareTag("Bullet"))
         {
             Debug.Log("test");
-            _curHp--;
+            CurHp--;
         }
     }
 

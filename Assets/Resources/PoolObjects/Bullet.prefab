@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4353548477223498}
   - component: {fileID: 198029806073105500}
-  - component: {fileID: 114462325042850874}
   - component: {fileID: 199520367857297476}
   - component: {fileID: 108080247811274414}
   - component: {fileID: 54175853139288072}
   - component: {fileID: 135786877233098124}
   - component: {fileID: -7129787611794040676}
+  - component: {fileID: 2686253330038433937}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -4831,25 +4831,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &114462325042850874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795072395756124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 605a456cfc02f6b499a64717539a27e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 15
-  hitOffset: 0.01
-  UseFirePointRotation: 0
-  rotationOffset: {x: 0, y: 0, z: 0}
-  hit: {fileID: 1974592250055434, guid: b15a120c1390db449b8eb5af19d62424, type: 3}
-  flash: {fileID: 1434253245967370, guid: 6b80d5fba4e83cb4584421b219575610, type: 3}
-  Detached: []
 --- !u!199 &199520367857297476
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5055,3 +5036,22 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &2686253330038433937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795072395756124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac96f4cdd853e7f4eb48b9c67f2f4b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  hitOffset: 0.01
+  UseFirePointRotation: 0
+  rotationOffset: {x: 0, y: 0, z: 0}
+  hit: {fileID: 1974592250055434, guid: b15a120c1390db449b8eb5af19d62424, type: 3}
+  flash: {fileID: 1434253245967370, guid: 6b80d5fba4e83cb4584421b219575610, type: 3}
+  Detached: []
