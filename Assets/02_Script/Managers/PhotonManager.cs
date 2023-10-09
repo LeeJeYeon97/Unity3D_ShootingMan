@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using Photon.Pun;
-using Photon.Realtime;
 using UnityEngine.SceneManagement;
 
+/*
 public class PhotonManager : MonoBehaviourPunCallbacks
 {
     // 게임 버전
+    
     string gameVersion = "1.0";
 
     private string userId = "JeYeon";
@@ -84,7 +84,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
 
         if(PhotonNetwork.IsMasterClient)
         {
-            Managers.Scene.LoadLevel(Define.SceneType.Game);
+            Managers.Scene.LoadLevel(Define.SceneType.Loading);
         }
     }
     public void LeaveRoom()
@@ -97,3 +97,4 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     }
 
 }
+*/

@@ -12,6 +12,7 @@ public class Define : MonoBehaviour
     {
         Unknown,
         Lobby,
+        Loading,
         Game,
     }
 }

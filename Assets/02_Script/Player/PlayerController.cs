@@ -1,12 +1,11 @@
 using Cinemachine;
-using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviourPun
+public class PlayerController : MonoBehaviour
 {
     #region Private Component
 
@@ -104,18 +103,16 @@ public class PlayerController : MonoBehaviourPun
         CurHp = MaxHp;
 
         
-        if(photonView.IsMine)
-        {
-            GameObject hud = Resources.Load<GameObject>("UI/Scene/UI_Hud");
-            Instantiate(hud, transform);
-            
-            // 카메라 설정
-            cameraRoot = new GameObject("CameraRoot");
+        GameObject hud = Resources.Load<GameObject>("UI/Scene/UI_Hud");
+        Instantiate(hud, transform);
+        
+        // 카메라 설정
+        cameraRoot = new GameObject("CameraRoot");
 
-            CinemachineVirtualCamera curCam = GameObject.Find("Virtual Camera").GetComponent<CinemachineVirtualCamera>();
-            curCam.LookAt = cameraRoot.transform;
-            curCam.Follow = cameraRoot.transform;
-        }
+        CinemachineVirtualCamera curCam = GameObject.Find("Virtual Camera").GetComponent<CinemachineVirtualCamera>();
+        curCam.LookAt = cameraRoot.transform;
+        curCam.Follow = cameraRoot.transform;
+        
     }
     private void OnEnable()
     {

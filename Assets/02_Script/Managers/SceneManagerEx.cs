@@ -1,4 +1,4 @@
-using Photon.Pun;
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,7 +23,8 @@ public class SceneManagerEx
     }
     public void LoadLevel(Define.SceneType type)
     {
-        PhotonNetwork.LoadLevel(GetSceneName(type));
+        CurrentScene.Clear();
+        //PhotonNetwork.LoadLevel(GetSceneName(type));
     }
     
 }

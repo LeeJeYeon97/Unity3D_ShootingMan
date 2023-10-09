@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_Hud : MonoBehaviour
+public class UI_Hud : UI_Scene
 {
     Collider coll;
     PlayerController player;

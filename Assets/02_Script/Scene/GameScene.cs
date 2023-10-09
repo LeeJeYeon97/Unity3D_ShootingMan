@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;
 
 public class GameScene : BaseScene
 {
@@ -16,7 +15,8 @@ public class GameScene : BaseScene
         // 맵 추가
 
         // Player 생성        
-        GameObject player = PhotonNetwork.Instantiate("Objects/Player", Vector3.zero, Quaternion.identity);
+        GameObject playerPrefabs = Resources.Load<GameObject>("UI/Object/Player");
+        GameObject player = Instantiate(playerPrefabs, Vector3.zero, Quaternion.identity);
         
         // Manager 추가
         Managers.Pool.Init();

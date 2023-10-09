@@ -24,12 +24,12 @@ public class UI_Lobby : UI_Scene
     }
     void Start()
     {
-        PhotonManager photon = GameObject.Find("@PhotonManager").GetComponent<PhotonManager>();
-
-        battleButton.onClick.AddListener(() =>
-        {
-            photon.QuickMatch();
-        });
+        //PhotonManager photon = GameObject.Find("@PhotonManager").GetComponent<PhotonManager>();
+        //
+        //battleButton.onClick.AddListener(() =>
+        //{
+        //    photon.QuickMatch();
+        //});
 
     }
 }
