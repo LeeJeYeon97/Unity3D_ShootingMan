@@ -8,4 +8,10 @@ public class Define : MonoBehaviour
     {
         Bullet,
     }
+    public enum SceneType
+    {
+        Unknown,
+        Lobby,
+        Game,
+    }
 }

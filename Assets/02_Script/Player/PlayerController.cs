@@ -1,10 +1,12 @@
+using Cinemachine;
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviourPun
 {
     #region Private Component
 
@@ -31,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
     #region Public Field
 
-    public GameObject root;
+    public GameObject cameraRoot;
 
 
     private bool _isAttack;
@@ -101,9 +103,19 @@ public class PlayerController : MonoBehaviour
         MaxHp = 100;
         CurHp = MaxHp;
 
-        GameObject hud = Resources.Load<GameObject>("UI/UI_Hud");
-        Instantiate(hud, transform);
+        
+        if(photonView.IsMine)
+        {
+            GameObject hud = Resources.Load<GameObject>("UI/Scene/UI_Hud");
+            Instantiate(hud, transform);
+            
+            // 카메라 설정
+            cameraRoot = new GameObject("CameraRoot");
 
+            CinemachineVirtualCamera curCam = GameObject.Find("Virtual Camera").GetComponent<CinemachineVirtualCamera>();
+            curCam.LookAt = cameraRoot.transform;
+            curCam.Follow = cameraRoot.transform;
+        }
     }
     private void OnEnable()
     {
@@ -129,7 +141,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         // 카메라 루트 따라다니게 조정
-        root.transform.position = transform.position;
+        cameraRoot.transform.position = transform.position;
 
         Move();
         Roll();
@@ -182,7 +194,6 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Bullet"))
         {
-            Debug.Log("test");
             CurHp--;
         }
     }
